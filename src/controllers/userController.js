@@ -17,7 +17,6 @@ module.exports = {
     // });
   },
   userTest: function (req, res) {
-    console.log('user test route');
-    res.json('test route on user reached');
+    res.send('user test route');
   },
 };
