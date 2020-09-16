@@ -10,9 +10,14 @@ module.exports = {
       });
   },
   create: function (req, res) {
-    db.User.create(req.body, (err, res) => {
-      if (err) throw err;
-      console.log(res);
-    });
+    res.send(req.body);
+    // db.User.create(req.body, (err, res) => {
+    //   if (err) throw err;
+    //   console.log(res);
+    // });
+  },
+  userTest: function (req, res) {
+    console.log('user test route');
+    res.json('test route on user reached');
   },
 };

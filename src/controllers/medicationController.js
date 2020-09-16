@@ -9,4 +9,12 @@ module.exports = {
         res.json(data);
       });
   },
+  medTest: async function (req, res) {
+    console.log('medication route reached');
+    try {
+      await res.send('test route on medication route reached');
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };
