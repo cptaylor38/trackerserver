@@ -19,4 +19,7 @@ module.exports = {
   userTest: function (req, res) {
     res.send('user test route');
   },
+  signUp: function (req, res) {
+    res.send('You made a post request', req.body);
+  },
 };
