@@ -1,4 +1,6 @@
+const { User } = require('../models');
 const db = require('../models');
+const jwt = require('jsonwebtoken');
 
 module.exports = {
   getProfile: function (req, res) {
@@ -18,8 +20,5 @@ module.exports = {
   },
   userTest: function (req, res) {
     res.send('user test route');
-  },
-  signUp: function (req, res) {
-    res.send('You made a post request', req.body);
   },
 };
