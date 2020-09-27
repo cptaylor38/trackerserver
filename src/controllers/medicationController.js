@@ -1,5 +1,4 @@
 const db = require('../models');
-const cheerio = require('cheerio');
 const axios = require('axios');
 
 module.exports = {
@@ -28,14 +27,5 @@ module.exports = {
       form: req.body.form,
     };
     let url = `https://www.goodrx.com/${med.name}?dosage=${med.dosage}&form=${med.form}&label_override=${med.name}&quantity=${med.qty}`;
-
-    await axios
-      .get(url)
-      .then((response) => {
-        let $ = cheerio.load(response.data);
-        console.log($);
-        res.send($);
-      })
-      .catch((err) => res.json(err));
   },
 };
