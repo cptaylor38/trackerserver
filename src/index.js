@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const app = express();
 const routes = require('./routes');
 const PORT = process.env.PORT || 5000;
+require('dotenv').config();
 
-const mongoURI =
-  'mongodb+srv://cylordev:mdbpassword@cluster0.ykymj.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGOURI;
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,

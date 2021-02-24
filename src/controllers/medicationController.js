@@ -1,5 +1,4 @@
 const db = require('../models');
-const axios = require('axios');
 
 module.exports = {
   display: function (req, res) {
@@ -19,13 +18,12 @@ module.exports = {
     }
   },
   addMed: async function (req, res) {
-    //const med = req.body;
+    console.log(req.body);
     let med = {
       name: req.body.name,
       dosage: req.body.dosage,
       qty: req.body.quantity,
       form: req.body.form,
     };
-    let url = `https://www.goodrx.com/${med.name}?dosage=${med.dosage}&form=${med.form}&label_override=${med.name}&quantity=${med.qty}`;
   },
 };
